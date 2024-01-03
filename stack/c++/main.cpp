@@ -11,25 +11,27 @@ public:
 
     int push(int data){
         std::cout << (this->top +1 > MAX ) << std::endl;
-        if ( (top + 2) > MAX ){
+        if ( (top + 1) >= MAX ){
             throw std::overflow_error("StackOverflow");
         }
         std::cout << "Pushing " << data << " To the Stack" << std::endl;
         this->top = this->top + 1;
         this->data[this->top ] = data;
+        this->printStack();
         return data; 
     }
     void printTop(){
         std::cout << "Top is : "<<this->top << std::endl;
     }
     int pop() {
-        if (this->top -1  < -1 ){
+        if (this->top  == -1 ){
             throw std::underflow_error("StackUnderflow");
         }
         int original = this->data[this->top];
         std::cout << "Popping " << original << " From the Stack" << std::endl;
         this->data[this->top] = 0;
         this->top = this->top - 1 ;
+        this->printStack();
         return original;
     }
     void printStack() {
@@ -43,5 +45,8 @@ public:
 
 int main() { 
     Stack stack;
+    stack.push(21);
+    stack.push(43);
     stack.pop();
+    stack.printStack();
 }

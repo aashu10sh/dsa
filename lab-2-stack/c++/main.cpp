@@ -42,6 +42,10 @@ public:
     }
     bool isEmpty() { return this->top == -1; }
     bool isFull(){ return top +1 >= MAX; }
+
+    Stack initStack(){
+        return *this;   
+    }
 };
 
 int main() { 

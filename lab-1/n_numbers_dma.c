@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #include <stdlib.h>
 
 int main(void) {
@@ -19,11 +18,11 @@ int main(void) {
     min = numbers_pointer;
 
     for (int i = 0; i < n; i++) {
-        if (( * max) < ( * numbers_pointer + i)) {
-            max = numbers_pointer + i;
+        if (( * max) < ( * (numbers_pointer + i))) {
+            max = (numbers_pointer + i);
         }
-        if (( * min) > ( * numbers_pointer + i)) {
-            min = numbers_pointer + i;
+        if (( * min) > ( * (numbers_pointer + i))) {
+            min = (numbers_pointer + i);
         }
         sum += * numbers_pointer + i;
     }

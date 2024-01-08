@@ -1,5 +1,5 @@
 #include <iostream>
-#define MAX 20
+#define MAX 3
 
 class Stack {
 private:
@@ -48,9 +48,21 @@ public:
 };
 
 int main() { 
-    Stack stack;
-    stack.push(21);
-    stack.push(43);
-    stack.pop();
-    stack.printStack();
+    Stack stack1;
+    // Normal Stack Processes
+    std::cout << " Is Empty ? " << stack1.isEmpty() << std::endl;
+    stack1.push(21);
+    stack1.push(43);
+    stack1.printStack();
+    stack1.pop();
+    stack1.printStack();
+    Stack stack2;
+    stack2.push(1);
+    stack2.push(2);
+    stack2.push(3);
+    std::cout << " Is Full ? "  << stack2.isFull() << std::endl;
+    // stack2.push(4); // Overflow
+
+    Stack stack3;
+    stack3.pop(); // Underflow
 }

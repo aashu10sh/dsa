@@ -10,7 +10,6 @@ public:
     Stack() {}
 
     int push(int data){
-        std::cout << (this->top +1 > MAX ) << std::endl;
         if ( (top + 1) >= MAX ){
             throw std::overflow_error("StackOverflow");
         }
@@ -36,7 +35,7 @@ public:
     }
     void printStack() {
         std::cout << "Printing Stack! "<< this->top  << std::endl;
-        for(int i = 0 ;i<=top ; ++i){
+        for(int i = 0 ;i<=top ; i++){
             std::cout << "| " << data[top - i] << " |" <<std::endl;
         }
     }

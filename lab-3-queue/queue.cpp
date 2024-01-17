@@ -23,7 +23,7 @@ public:
     }
     int dequeue(){
         if (rear == front){
-            throw std::underflow_error("The Queue is Underflow");
+            throw std::underflow_error("The Queue is Underflowing");
         }
         int original = data[rear];
         data[rear] = 0 ;

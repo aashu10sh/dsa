@@ -51,5 +51,5 @@ int main(void){
     q.dequeue();
     q.dequeue();
     q.printQueue();
-    q.dequeue(); // should throw underflow error.
+    // q.dequeue(); // should throw underflow error.
 }
